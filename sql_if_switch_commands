@@ -1,0 +1,18 @@
+* SELECT id,name,percentage, IF(percentage>=33,"Pas","Fail") AS Result From students;
+ 
+* SELECT id,name,percentage,
+ CASE
+      WHEN percentage >=80 AND percentage<=100 THEN "Merit"
+      WHEN percentage >=60 AND percentage<=80 THEN "1st Division"
+      ELSE "Not Correct %"
+ END AS Grade
+ FROM students;
+ 
+* UPDATE students SET
+ percentage=(CASE id
+       WHEN 3 THEN 39
+       WHEN 7 THEN 62
+  END)
+  WHEN id IN (3,7);
+  
+  * select column A,group_concat(column B) from table t group by column A;
