@@ -1,0 +1,4 @@
+select * ,row_number() over(partition by branch order by marks desc), rank()
+ over(partition by branch order by marks desc),dense_rank()
+ over(partition by branch order by marks desc)
+from marks;
